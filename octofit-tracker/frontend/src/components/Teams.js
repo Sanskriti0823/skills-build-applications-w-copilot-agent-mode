@@ -16,6 +16,7 @@ function Teams() {
         : 'https://localhost:8000';
       
       const apiUrl = `${codespaceUrl}/api/teams/`;
+      // API Reference: https://{CODESPACE_NAME}-8000.app.github.dev/api/teams
       console.log('Fetching Teams from:', apiUrl);
       
       const response = await fetch(apiUrl);

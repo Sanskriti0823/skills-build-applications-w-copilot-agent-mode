@@ -16,6 +16,7 @@ function Workouts() {
         : 'https://localhost:8000';
       
       const apiUrl = `${codespaceUrl}/api/workouts/`;
+      // API Reference: https://{CODESPACE_NAME}-8000.app.github.dev/api/workouts
       console.log('Fetching Workouts from:', apiUrl);
       
       const response = await fetch(apiUrl);

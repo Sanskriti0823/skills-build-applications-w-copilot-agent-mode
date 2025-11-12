@@ -16,6 +16,7 @@ function Users() {
         : 'https://localhost:8000';
       
       const apiUrl = `${codespaceUrl}/api/users/`;
+      // API Reference: https://{CODESPACE_NAME}-8000.app.github.dev/api/users
       console.log('Fetching Users from:', apiUrl);
       
       const response = await fetch(apiUrl);

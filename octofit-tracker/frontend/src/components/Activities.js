@@ -11,11 +11,15 @@ function Activities() {
 
   const fetchActivities = async () => {
     try {
+      // Use Codespace URL if available, otherwise fallback to localhost
       const codespaceUrl = process.env.REACT_APP_CODESPACE_NAME
         ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev`
         : 'https://localhost:8000';
       
+      // Construct API endpoint URL
       const apiUrl = `${codespaceUrl}/api/activities/`;
+      
+      // API Reference: https://{CODESPACE_NAME}-8000.app.github.dev/api/activities
       console.log('Fetching Activities from:', apiUrl);
       
       const response = await fetch(apiUrl);
